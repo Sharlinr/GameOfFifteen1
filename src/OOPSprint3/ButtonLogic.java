@@ -21,6 +21,13 @@ public class ButtonLogic extends JButton implements ActionListener {
         addActionListener(this);
 
     }
+    public void swap(ButtonLogic other) {
+        other.myDestination = myDestination;
+        other.setText(other.myDestination + "");
+        myDestination = 0;
+        setText("");
+
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) {
